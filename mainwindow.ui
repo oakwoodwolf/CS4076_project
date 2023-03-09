@@ -15,8 +15,22 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+    </item>
     <item row="1" column="0">
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="recipeName">
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -28,34 +42,46 @@
       </property>
      </widget>
     </item>
-    <item row="0" column="0" colspan="2">
-     <widget class="QLineEdit" name="lineEdit"/>
-    </item>
-    <item row="2" column="1">
-     <widget class="QScrollArea" name="scrollArea">
+    <item row="1" column="1" rowspan="3">
+     <widget class="QScrollArea" name="RecipeDesc">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777213</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
       <property name="widgetResizable">
        <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
       <widget class="QWidget" name="scrollAreaWidgetContents_2">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>696</width>
-         <height>485</height>
+         <width>584</width>
+         <height>511</height>
         </rect>
        </property>
-       <widget class="QTextBrowser" name="textBrowser">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>706</width>
-          <height>491</height>
-         </rect>
-        </property>
-        <property name="html">
-         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QTextBrowser" name="textBrowser">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
@@ -67,15 +93,27 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:15px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Open Sans','Arial','sans-serif'; font-size:14px; color:#000000; background-color:#ffffff;&quot;&gt;Donec eget dictum magna, sit amet scelerisque nunc. Nunc tempor leo sed ex ultrices suscipit. Pellentesque in dui venenatis, semper lacus vitae, aliquet odio. Vivamus vel lorem nunc. Fusce sit amet quam sed sem facilisis mollis quis pellentesque mauris. Proin nec sodales risus. Maecenas pretium accumsan tortor, a semper massa pretium ac. Vestibulum a hendrerit eros, vitae vehicula augue. Vestibulum ac sapien nec purus bibendum semper. Ut vel magna quis nisl fringilla scelerisque. Ut tristique lobortis metus, consequat fringilla massa porttitor id. Etiam ut luctus risus. Etiam finibus consectetur suscipit. Pellentesque sit amet fringilla risus.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:15px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Open Sans','Arial','sans-serif'; font-size:14px; color:#000000; background-color:#ffffff;&quot;&gt;Cras nec diam ac neque congue pretium eget vel enim. Donec rutrum mauris vitae nisl vehicula dignissim. Aliquam malesuada lobortis dictum. Aliquam erat volutpat. Fusce tempus, enim at finibus placerat, mauris justo euismod dolor, at mollis ligula enim vitae lacus. Vivamus id libero dui. Quisque dictum aliquet ipsum, vel varius lacus cursus in. Vestibulum ornare, diam at scelerisque blandit, felis augue sodales sapien, vitae suscipit risus ante in purus. In sit amet efficitur ligula, et hendrerit velit. Fusce dolor nisl, imperdiet quis neque feugiat, bibendum dictum turpis. In mattis aliquet lacus at vehicula. Curabitur elementum tincidunt massa, nec venenatis enim vehicula ultrices.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:15px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Open Sans','Arial','sans-serif'; font-size:14px; color:#000000; background-color:#ffffff;&quot;&gt;Nam fermentum at massa eu elementum. Morbi ultricies dui at tortor sollicitudin pretium. Vestibulum condimentum vestibulum lorem, et congue diam placerat in. Duis suscipit lectus lectus, vel gravida diam maximus quis. Vivamus pretium purus a sem sagittis, nec molestie arcu consectetur. Proin cursus dui non sapien congue sollicitudin. Fusce ac tincidunt tellus. Curabitur pulvinar placerat rutrum. Phasellus congue accumsan urna ac consequat. Pellentesque pellentesque sapien ultrices facilisis consectetur. Quisque molestie lectus ut erat rhoncus faucibus. Nulla feugiat, massa porttitor malesuada ullamcorper, elit massa suscipit tortor, in volutpat neque nibh quis elit. Pellentesque congue magna a nunc scelerisque, nec ullamcorper nulla consequat. Quisque et risus et nunc tincidunt posuere nec a lorem. Curabitur gravida.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-       </widget>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QToolButton" name="toolButton">
+     <widget class="QLabel" name="recipeImage">
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
       <property name="text">
-       <string>...</string>
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>To Site</string>
       </property>
      </widget>
     </item>
