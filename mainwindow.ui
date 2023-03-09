@@ -13,8 +13,84 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="1" column="0">
+     <widget class="QLabel" name="label">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="text">
+       <string>Recipe Name</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QLineEdit" name="lineEdit"/>
+    </item>
+    <item row="2" column="1">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>696</width>
+         <height>485</height>
+        </rect>
+       </property>
+       <widget class="QTextBrowser" name="textBrowser">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>706</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:15px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Open Sans','Arial','sans-serif'; font-size:14px; color:#000000; background-color:#ffffff;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque augue non pretium euismod. Proin gravida nisl in sem ultricies commodo. Cras viverra non ligula id laoreet. Nulla viverra tellus id accumsan sollicitudin. Aenean id odio cursus, varius leo vitae, ultrices lectus. Donec maximus consectetur justo quis congue. Suspendisse congue placerat nulla eget maximus. Donec fermentum ligula purus. Donec convallis lorem risus, vitae ullamcorper metus malesuada in. Proin ut maximus sem, vel tempus velit.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:15px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Open Sans','Arial','sans-serif'; font-size:14px; color:#000000; background-color:#ffffff;&quot;&gt;Nulla quis velit euismod, condimentum metus sed, imperdiet urna. Sed ullamcorper metus leo, sit amet bibendum dui faucibus eget. Maecenas aliquet tristique ullamcorper. Nulla facilisi. Curabitur imperdiet lorem sed rhoncus tincidunt. Aenean accumsan bibendum condimentum. Etiam ac odio dictum, luctus metus at, hendrerit ex. Mauris dignissim libero consectetur sapien blandit, eu luctus magna pulvinar. Nullam ante augue, molestie sed nisi et, laoreet tempor sem. Proin justo ipsum, tristique volutpat urna a, tristique fermentum mi. Vivamus porttitor facilisis ligula, vitae sodales arcu. Sed nec eros lacus. Fusce consectetur mi et quam sodales mattis. Morbi augue neque, malesuada non tincidunt vitae, congue nec arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquet est ut ultrices pretium.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:15px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Open Sans','Arial','sans-serif'; font-size:14px; color:#000000; background-color:#ffffff;&quot;&gt;Donec eget dictum magna, sit amet scelerisque nunc. Nunc tempor leo sed ex ultrices suscipit. Pellentesque in dui venenatis, semper lacus vitae, aliquet odio. Vivamus vel lorem nunc. Fusce sit amet quam sed sem facilisis mollis quis pellentesque mauris. Proin nec sodales risus. Maecenas pretium accumsan tortor, a semper massa pretium ac. Vestibulum a hendrerit eros, vitae vehicula augue. Vestibulum ac sapien nec purus bibendum semper. Ut vel magna quis nisl fringilla scelerisque. Ut tristique lobortis metus, consequat fringilla massa porttitor id. Etiam ut luctus risus. Etiam finibus consectetur suscipit. Pellentesque sit amet fringilla risus.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:15px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Open Sans','Arial','sans-serif'; font-size:14px; color:#000000; background-color:#ffffff;&quot;&gt;Cras nec diam ac neque congue pretium eget vel enim. Donec rutrum mauris vitae nisl vehicula dignissim. Aliquam malesuada lobortis dictum. Aliquam erat volutpat. Fusce tempus, enim at finibus placerat, mauris justo euismod dolor, at mollis ligula enim vitae lacus. Vivamus id libero dui. Quisque dictum aliquet ipsum, vel varius lacus cursus in. Vestibulum ornare, diam at scelerisque blandit, felis augue sodales sapien, vitae suscipit risus ante in purus. In sit amet efficitur ligula, et hendrerit velit. Fusce dolor nisl, imperdiet quis neque feugiat, bibendum dictum turpis. In mattis aliquet lacus at vehicula. Curabitur elementum tincidunt massa, nec venenatis enim vehicula ultrices.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:15px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Open Sans','Arial','sans-serif'; font-size:14px; color:#000000; background-color:#ffffff;&quot;&gt;Nam fermentum at massa eu elementum. Morbi ultricies dui at tortor sollicitudin pretium. Vestibulum condimentum vestibulum lorem, et congue diam placerat in. Duis suscipit lectus lectus, vel gravida diam maximus quis. Vivamus pretium purus a sem sagittis, nec molestie arcu consectetur. Proin cursus dui non sapien congue sollicitudin. Fusce ac tincidunt tellus. Curabitur pulvinar placerat rutrum. Phasellus congue accumsan urna ac consequat. Pellentesque pellentesque sapien ultrices facilisis consectetur. Quisque molestie lectus ut erat rhoncus faucibus. Nulla feugiat, massa porttitor malesuada ullamcorper, elit massa suscipit tortor, in volutpat neque nibh quis elit. Pellentesque congue magna a nunc scelerisque, nec ullamcorper nulla consequat. Quisque et risus et nunc tincidunt posuere nec a lorem. Curabitur gravida.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QToolButton" name="toolButton">
+      <property name="text">
+       <string>...</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
