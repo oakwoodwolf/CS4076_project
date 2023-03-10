@@ -16,14 +16,33 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_3">
     <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit">
-      <property name="text">
-       <string>Search</string>
-      </property>
+     <widget class="QComboBox" name="comboBox">
+      <item>
+       <property name="text">
+        <string>Strawberry Cheesecake</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Peppermint Creams</string>
+       </property>
+      </item>
      </widget>
     </item>
-    <item row="1" column="0">
+    <item row="1" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
      <widget class="QLabel" name="recipeName">
+      <property name="minimumSize">
+       <size>
+        <width>256</width>
+        <height>64</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>256</width>
+        <height>64</height>
+       </size>
+      </property>
       <property name="font">
        <font>
         <family>Arial Black</family>
@@ -39,6 +58,37 @@
       </property>
       <property name="text">
        <string>Recipe Name</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" alignment="Qt::AlignLeft|Qt::AlignVCenter">
+     <widget class="QLabel" name="recipeImage">
+      <property name="minimumSize">
+       <size>
+        <width>256</width>
+        <height>256</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>256</width>
+        <height>256</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="thumbnails.qrc">:/thumb/res/pics/strawberry-cheesecake-11.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
       </property>
      </widget>
     </item>
@@ -73,7 +123,7 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>584</width>
+         <width>520</width>
          <height>511</height>
         </rect>
        </property>
@@ -100,18 +150,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </widget>
      </widget>
     </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="recipeImage">
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
     <item row="3" column="0">
      <widget class="QPushButton" name="pushButton">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>48</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>To Site</string>
       </property>
@@ -131,6 +184,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="thumbnails.qrc"/>
+ </resources>
  <connections/>
 </ui>

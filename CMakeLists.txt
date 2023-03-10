@@ -19,6 +19,9 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        recipe.h
+        recipe.cpp
+        thumbnails.qrc
         ${TS_FILES}
 )
 

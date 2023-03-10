@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "recipe.h"
 
 #include <QApplication>
 #include <QLocale>
@@ -6,7 +7,7 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+        QApplication a(argc, argv);
 
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();
