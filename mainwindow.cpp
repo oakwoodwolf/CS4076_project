@@ -15,8 +15,9 @@ MainWindow::MainWindow(QWidget *parent)
 
 {
 
-    QPixmap recipePic ("../res/pics/strawberry-cheesecake-11.jpg");
+    QPixmap recipePic ("://res/pics/peppermint-creams-d7716e6.jpg");
     ui->setupUi(this);
+    ui->recipeImage->setPixmap(recipePic);
     ui->recipeName->setText(recipe0.getName());
     ui->textBrowser->setText(recipe0.getRecipeText());
 

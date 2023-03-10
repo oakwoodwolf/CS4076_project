@@ -1,5 +1,6 @@
 <RCC>
-    <qresource prefix="/thumb">
+    <qresource prefix="/">
         <file>res/pics/strawberry-cheesecake-11.jpg</file>
+        <file>res/pics/peppermint-creams-d7716e6.jpg</file>
     </qresource>
 </RCC>
