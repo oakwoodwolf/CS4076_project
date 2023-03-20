@@ -22,6 +22,8 @@ set(PROJECT_SOURCES
         recipe.h
         recipe.cpp
         thumbnails.qrc
+        recipeloader.h
+        recipeloader.cpp
         ${TS_FILES}
 )
 
