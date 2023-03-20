@@ -1,10 +1,13 @@
 #include "recipeloader.h"
+#include "qjsonobject.h"
 #include "recipe.h"
 #include <fstream>
 #include <QString>
 #include <QFile>
-#include <QJsonObject>
+#include <QJsonArray>
+#include <QJsonDocument>
 #include <iostream>
+#define inputFile   "://res/json/recipes.json"
 
 recipeLoader::recipeLoader()
 {
@@ -12,9 +15,19 @@ recipeLoader::recipeLoader()
 }
 std::list<recipe> recipeLoader::LoadRecipes(){
 
-    QFile inputFile("://res/json/recipes.json");
+    QFile file;
+    QString contents;
+    //Read file
+    file.setFileName(QString::fromStdString(inputFile));
+    file.open(QIODevice::ReadOnly);
+    contents = file.readAll();
+    file.close();
+    qWarning() << contents;
+    QJsonDocument recipeDoc = QJsonDocument::fromJson(contents.toUtf8());
+    QJsonValue val = recipeDoc.object();
+    QJsonArray recipeArray = val.toArray();
 
-    QByteArray jsonData = inputFile.open();
+
 
     std::list<recipe> recipes;
     for (auto& recipeData : jsonData["recipes"]){ //iterate regardless of type
