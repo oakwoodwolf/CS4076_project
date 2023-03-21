@@ -4,6 +4,7 @@
 #include <fstream>
 #include <QString>
 #include <QFile>
+#include <QList>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <iostream>
@@ -13,31 +14,34 @@ recipeLoader::recipeLoader()
 {
 
 }
-std::list<recipe> recipeLoader::LoadRecipes(){
+QList<recipe> recipeLoader::LoadRecipes(){
+    QList<recipe> recipes;
+    /*QFile file(inputFile);
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+            return recipes;
 
-    QFile file;
-    QString contents;
-    //Read file
-    file.setFileName(QString::fromStdString(inputFile));
-    file.open(QIODevice::ReadOnly);
-    contents = file.readAll();
-    file.close();
-    qWarning() << contents;
-    QJsonDocument recipeDoc = QJsonDocument::fromJson(contents.toUtf8());
-    QJsonValue val = recipeDoc.object();
-    QJsonArray recipeArray = val.toArray();
+        QByteArray jsonData = file.readAll();
+        QJsonDocument document = QJsonDocument::fromJson(jsonData);
+        if (document.isNull())
+            return recipes;
 
+        if (!document.isArray())
+            return recipes;
 
+        QJsonArray jsonArray = document.array();
+        foreach (const QJsonValue & value, jsonArray) {
+            if (!value.isObject())
+                continue;
 
-    std::list<recipe> recipes;
-    for (auto& recipeData : jsonData["recipes"]){ //iterate regardless of type
-        QString recipeName = QString::fromStdString( recipeData["recipeName"]);
-        QString recipeText = QString::fromStdString( recipeData["recipeText"]);
-        QString recipeImg = QString::fromStdString( recipeData["recipeImg"]);
-        QString recipeUrl = QString::fromStdString( recipeData["recipeUrl"]);
-        int difficulty = recipeData["difficulty"];
-        recipe recipe(recipeName, recipeImg, recipeText, difficulty);
-        recipes.push_back(recipe);
-    }
+            QJsonObject obj = value.toObject();
+            QString name = obj.value("recipeName").toString();
+            QString text = obj.value("recipeText").toString();
+            QString url = obj.value("recipeImg").toString();
+            int difficulty = obj.value("difficulty").toInt();
+
+            recipe newRecipe(name, text, url, difficulty);
+            recipes.emplace_back(name, text, url, difficulty);
+        }*/
+
     return recipes;
 }

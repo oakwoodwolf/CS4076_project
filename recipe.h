@@ -38,7 +38,7 @@ private:
     QString RecipeImg = "";
     int Difficulty = 1;
     QUrl sourceURL = QUrl("https://www.bbcgoodfood.com/recipes/strawberry-cheesecake-4-easy-steps");
-
+    friend class recipeLoader;
 signals:
 
 };
