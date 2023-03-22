@@ -16,7 +16,7 @@ public:
          Name = name; RecipeText = recipeText, Difficulty = difficulty;
          RecipeImg = resPath + recipeImg;
     }
-    QString getName(){
+    QString getName() const{
         return Name;
     }
     QString getRecipeText(){
