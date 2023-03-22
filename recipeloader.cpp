@@ -14,9 +14,9 @@ recipeLoader::recipeLoader()
 {
 
 }
-QList<recipe> recipeLoader::LoadRecipes(){
-    QList<recipe> recipes;
-    /*QFile file(inputFile);
+QList<recipe*> recipeLoader::LoadRecipes(){
+    QList<recipe*> recipes;
+    QFile file(inputFile);
         if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
             return recipes;
 
@@ -40,8 +40,8 @@ QList<recipe> recipeLoader::LoadRecipes(){
             int difficulty = obj.value("difficulty").toInt();
 
             recipe newRecipe(name, text, url, difficulty);
-            recipes.emplace_back(name, text, url, difficulty);
-        }*/
+            recipes.append(&newRecipe);
+        }
 
     return recipes;
 }

@@ -8,7 +8,7 @@ class recipeLoader
 {
 public:
     recipeLoader();
-    QList<recipe> LoadRecipes();
+    QList<recipe *> LoadRecipes();
 };
 
 #endif // RECIPELOADER_H
