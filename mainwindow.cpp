@@ -26,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
     recipePtr = recipeList.at(0);
     QPixmap recipePic (recipePtr->getImage());
     ui->setupUi(this);
-    ui->comboBox->activated(0);
+    on_comboBox_started(0);
     ui->recipeImage->setPixmap(recipePic);
     ui->recipeName->setText(recipePtr->getName());
     ui->textBrowser->setText(recipePtr->getRecipeText());
@@ -64,12 +64,12 @@ void MainWindow::on_comboBox_currentIndexChanged(int index)
 }
 
 
-void MainWindow::on_comboBox_activated(int index)
+void MainWindow::on_comboBox_started(int index)
 {
     QStringList recipeNames;
     foreach(recipe* const item, recipeList)
     {
-        recipeNames.push_front(item->getName()) ;
+        recipeNames.push_back(item->getName()) ;
     }
     //ui->comboBox->clear();
     ui->comboBox->addItems(recipeNames);
