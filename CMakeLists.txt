@@ -22,7 +22,7 @@ set(PROJECT_SOURCES
         recipe.h
         recipe.cpp
         ingredient.h
-        ingredient.cpp
+        tbspingredient.h
         thumbnails.qrc
         recipeloader.h
         recipeloader.cpp

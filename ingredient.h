@@ -11,7 +11,7 @@ public:
     QString getName(){
         return name;
     }
-private:
+protected:
     QString name;
     float capacity;
 
