@@ -5,3 +5,4 @@ cookingRecipe::cookingRecipe(QObject *parent)
 {
 
 }
+

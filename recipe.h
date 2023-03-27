@@ -9,6 +9,8 @@ using std::string;
 class recipe : public QObject
 {
     Q_OBJECT
+protected:
+    QString Name = "cake";
 public:
     QString resPath{"://res/pics/"};
     explicit recipe(QObject *parent = nullptr);
@@ -23,7 +25,7 @@ public:
     QString getName() const{
         return Name;
     }
-    QString getRecipeText(){
+    virtual QString getRecipeText(){
         return RecipeText;
     }
     int getDifficulty(){
@@ -37,7 +39,7 @@ public:
     }
 
 private:
-    QString Name = "cake";
+
     QString RecipeText = "";
     QString RecipeImg = "";
     int Difficulty = 1;
