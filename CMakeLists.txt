@@ -21,6 +21,8 @@ set(PROJECT_SOURCES
         mainwindow.ui
         recipe.h
         recipe.cpp
+        ingredient.h
+        ingredient.cpp
         thumbnails.qrc
         recipeloader.h
         recipeloader.cpp
