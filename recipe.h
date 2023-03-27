@@ -16,6 +16,10 @@ public:
          Name = name; RecipeText = recipeText, Difficulty = difficulty;
          RecipeImg = resPath + recipeImg;
     }
+    recipe(QString name, QString recipeImg, QString recipeText, int difficulty, QUrl link){
+         Name = name; RecipeText = recipeText, Difficulty = difficulty, sourceURL = link;
+         RecipeImg = resPath + recipeImg;
+    }
     QString getName() const{
         return Name;
     }

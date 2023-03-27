@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "recipe.h"
-#include "recipeloader.h"
 #include <QUrl>
 #include <QList>
 #include <QDesktopServices> // for opening a link
