@@ -21,13 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 
 {
-    tbspIngredient test("Test", 3);
-
-
-
-    recipeList.append(&recipe0);
-    recipeList.append(&recipe1);
-    recipeList.append(&recipe2);
+    LoadRecipes();
     recipePtr = recipeList.at(0);
     QPixmap recipePic (recipePtr->getImage());
     ui->setupUi(this);
@@ -53,14 +47,6 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_comboBox_currentIndexChanged(int index)
 {
         recipePtr = recipeList.at(index);
- /*switch (index){
-    case 1:
-     recipePtr = &recipe1;
-     break;
-    default:
-        recipePtr = &recipe0;
-     break;
- }*/
     QPixmap recipePic (recipePtr->getImage());
     ui->recipeImage->setPixmap(recipePic);
     ui->recipeName->setText(recipePtr->getName());
@@ -78,5 +64,14 @@ void MainWindow::on_comboBox_started(int index)
     }
     //ui->comboBox->clear();
     ui->comboBox->addItems(recipeNames);
+}
+void MainWindow::LoadRecipes(){
+    tbspIngredient test("Test", 3);
+
+
+
+    recipeList.append(&recipe0);
+    recipeList.append(&recipe1);
+    recipeList.append(&recipe2);
 }
 

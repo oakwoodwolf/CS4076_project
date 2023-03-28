@@ -14,6 +14,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+     void LoadRecipes();
 
 private slots:
     void on_pushButton_clicked();
