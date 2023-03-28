@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "recipe.h"
+#include "tbspingredient.h"
 #include <QUrl>
 #include <QList>
 #include <QDesktopServices> // for opening a link
@@ -13,11 +14,18 @@ recipe recipe1 = recipe("Peppermint Creams", "peppermint-creams-d7716e6.jpg","ST
 recipe recipe2 = recipe("Peppermint Creams 2", "peppermint-creams-d7716e6.jpg","STEP 1\nSieve the icing sugar into a large bowl. Add a little of the egg white and a few drops of the peppermint essence and mix really well. You want the mixture to come together as a soft dough, so keep adding a little egg white until this starts to happen (you might not need to use all of it). Taste the mixture and add more peppermint essence if desired.\n\nSTEP 2\nDivide the mixture into 20 small balls, then flatten them gently with your fingertips into discs.\n\nSTEP 3\nPlace baking parchment on a large board or tray and space out the discs. Meanwhile, tip the chocolate into a microwavable bowl and heat in 30 second intervals in the microwave until melted, stirring after each blast. Once melted, leave the chocolate to cool for 5-10 mins then carefully dip the peppermint creams in the melted chocolate until they are half coated. Lay them back on the baking parchment to set for 3-4 hours or overnight.",1);
 recipe * recipePtr = &recipe0;
 
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 
 {
+    /*tbspIngredient test("Test", 3);
+    recipe0.setIngredient(0, &test);
+        recipe1.setIngredient(0, &test);
+            recipe2.setIngredient(0, &test);*/
+
 
     recipeList.append(&recipe0);
     recipeList.append(&recipe1);
