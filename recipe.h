@@ -32,7 +32,7 @@ public:
     }
     virtual QString getRecipeText(){
         QString output;
-        output = printIngredients() + RecipeText;
+        output = /*printIngredients() +*/ RecipeText;
         return output;
     }
     int getDifficulty(){
