@@ -3,5 +3,6 @@
         <file>res/pics/strawberry-cheesecake-11.jpg</file>
         <file>res/pics/peppermint-creams-d7716e6.jpg</file>
         <file>res/json/recipes.json</file>
+        <file>res/pics/chips.png</file>
     </qresource>
 </RCC>
